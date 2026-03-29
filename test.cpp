@@ -14,30 +14,30 @@ public:
     int nums = 0;
 };
 
-// class dragon {
-// public:
-//	int health = 0, nums = 0;
-// };
-//
-// class ninja {
-// public:
-//	int health = 0, nums = 0;
-// };
-//
-// class iceman {
-// public:
-//	int health = 0, nums = 0;
-// };
-//
-// class lion {
-// public:
-//	int health = 0, nums = 0;
-// };
-//
-// class wolf {
-// public:
-//	int health = 0, nums = 0;
-// };
+class dragon {
+ public:
+	int health = 0, nums = 0;
+ };
+
+ class ninja {
+ public:
+	int health = 0, nums = 0;
+ };
+
+ class iceman {
+ public:
+	int health = 0, nums = 0;
+ };
+
+ class lion {
+ public:
+	int health = 0, nums = 0;
+ };
+
+ class wolf {
+ public:
+	int health = 0, nums = 0;
+ };
 
 int ranks[5][2]{0};
 
@@ -46,11 +46,11 @@ class base
 public:
     warriors warrior[5]; // dragon 、ninja、iceman、lion、wolf
 
-    /*dragon dr;
+    dragon dr;
     ninja nj;
     iceman im;
     lion on;
-    wolf wf;*/
+    wolf wf;
 
     int remainhealth = 0;
     string color = " ";
@@ -67,14 +67,14 @@ public:
         }
     }
 
-    /*void forzero(base& color) {
+    void forzero(base& color) {
         color.dr.nums = 0;
         color.im.nums = 0;
         color.on.nums = 0;
         color.nj.nums = 0;
         color.wf.nums = 0;
         return;
-    }*/
+    }
 };
 
 int times[3] = {0};
@@ -100,8 +100,8 @@ void initialize()
 {
     red.tag = 1, blue.tag = 1;
     lastred = 0, lastblue = 0;
-    /*red.forzero(red);
-    blue.forzero(blue);*/
+    red.forzero(red);
+    blue.forzero(blue);
     red.reset();
     blue.reset();
 
@@ -119,13 +119,13 @@ void initialize()
     {
         red.warrior[i].health = blue.warrior[i].health = health[i];
     }
-    /*red.dr.health = health[0], blue.dr.health = health[0];
+    red.dr.health = health[0], blue.dr.health = health[0];
     red.nj.health = health[1], blue.nj.health = health[1];
     red.im.health = health[2], blue.im.health = health[2];
     red.on.health = health[3], blue.on.health = health[3];
     red.wf.health = health[4], blue.wf.health = health[4];
     ranks[0][0] = red.im.health, ranks[1][0] = red.on.health, ranks[2][0] = red.wf.health, ranks[3][0] = red.nj.health, ranks[4][0] = red.dr.health;
-    ranks[0][1] = blue.on.health, ranks[1][1] = blue.dr.health, ranks[2][1] = blue.nj.health, ranks[3][1] = blue.im.health, ranks[4][1] = blue.wf.health;*/
+    ranks[0][1] = blue.on.health, ranks[1][1] = blue.dr.health, ranks[2][1] = blue.nj.health, ranks[3][1] = blue.im.health, ranks[4][1] = blue.wf.health;
     ranks[0][0] = red.warrior[2].health, ranks[1][0] = red.warrior[3].health, ranks[2][0] = red.warrior[4].health, ranks[3][0] = red.warrior[1].health, ranks[4][0] = red.warrior[0].health;
     ranks[0][1] = blue.warrior[3].health, ranks[1][1] = blue.warrior[0].health, ranks[2][1] = blue.warrior[1].health, ranks[3][1] = blue.warrior[2].health, ranks[4][1] = blue.warrior[4].health;
 }
@@ -182,7 +182,7 @@ void start()
             cout << " red headquarter stops making warriors" << endl;
             overred = 1;
         }
-        /*if (rn != -1 && overred == 0) {
+        if (rn != -1 && overred == 0) {
             for (int i = 0; i < 3; i++) cout << times[i];
             cout << " red ";
             switch (rn) {
@@ -253,7 +253,7 @@ void start()
             cout << " blue " << names << " " << blue.tag << " born with strength " << strg << "," << numss << " " << names << " in blue headquarter";
             cout << endl;
             blue.tag++;
-        }*/
+        }
         if (rn != -1 && overred == 0)
         {
             for (int i = 0; i < 3; i++)

@@ -1,3 +1,4 @@
 *.exe
 .vscode/
 draft.cpp
+test.cpp
